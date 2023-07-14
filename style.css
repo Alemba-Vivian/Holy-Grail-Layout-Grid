@@ -30,21 +30,10 @@ body{
 .grid-container{
     display: grid;
     gap: 15px;
-    grid-template-columns: 25% 75%;
    text-align: center;
    padding: 20px;
     /* grid-template-rows: repeat(5, 1fr); */
 }
-
-/* spanning the elements */
-.grid-column-span{
-    grid-column: span 2;
-}
-.grid-row-span{
-    grid-row: span 2;
-}
-
-
 
 
 /* ----header-- */
@@ -74,4 +63,20 @@ body{
 .layout:nth-child(5){
     background-color: var(--footer-background-clr);
     
+}
+
+/* adding responsiveness in our grid container using media query */
+@media (min-width: 800px){
+    .grid-container{
+        grid-template-columns: 25% 75%;
+    }
+    /* spanning the elements */
+.grid-column-span {
+    grid-column: span 2;
+}
+
+.grid-row-span {
+    grid-row: span 2;
+}
+
 }
